@@ -3,7 +3,7 @@
 """
 Print colored text in the terminal.
 
-# from jabbapylib.console import color
+# from jplib import color
 """
 
 from termcolor import colored

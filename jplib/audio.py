@@ -7,6 +7,12 @@ Playing audio (and video too) files.
 """
 
 import os
+
+if __name__ == "__main__":
+    import sys
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from pathlib import Path
 from pprint import pprint
 
 from jplib import config as cfg
@@ -14,6 +20,12 @@ from jplib.lib.pymediainfo import MediaInfo
 
 
 def get_info(fname):
+    """
+    >>> isinstance(get_info(str(Path(cfg.TEST_ASSETS_DIR, 'audio.mp3'))), dict)
+    True
+    >>> 'bit_rate' in get_info(str(Path(cfg.TEST_ASSETS_DIR, 'audio.mp3')))
+    True
+    """
     media_info = MediaInfo.parse(fname)
     for track in media_info.tracks:
         if track.track_type == 'Audio':
@@ -21,6 +33,10 @@ def get_info(fname):
 
 
 def get_duration(fname):
+    """
+    >>> get_duration(str(Path(cfg.TEST_ASSETS_DIR, 'audio.mp3')))
+    8.228
+    """
     media_info = MediaInfo.parse(fname)
     for track in media_info.tracks:
         if track.track_type == 'General':
@@ -39,7 +55,7 @@ def play(audio_file, background=False, debug=False):
 #############################################################################
 
 if __name__ == "__main__":
-    audio = cfg.TEST_ASSETS_DIR + '/audio.mp3'
+    audio = str(Path(cfg.TEST_ASSETS_DIR, 'audio.mp3'))
 #    play(audio, background=True)
     print(audio)
     print("-" * len(audio))

@@ -5,10 +5,10 @@ Configuration part.
 """
 
 __author__ = "Laszlo Szathmary (jabba.laci@gmail.com)"
-__version__ = "0.0.1"
-__date__ = "20141224"
-__copyright__ = "Copyright (c) 2011-2014 Laszlo Szathmary"
-__license__ = "GPL"
+__version__ = "0.3"
+__date__ = "20170112"
+__copyright__ = "Copyright (c) 2011-2017 Laszlo Szathmary"
+__license__ = "MIT"
 
 import os
 

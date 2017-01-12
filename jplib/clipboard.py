@@ -12,6 +12,11 @@ https://github.com/asweigart/mapitpy/blob/master/pyperclip.py
 # from jplib import clipboard
 """
 
+if __name__ == "__main__":
+    import os
+    import sys
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
 import subprocess
 
 from jplib import process
