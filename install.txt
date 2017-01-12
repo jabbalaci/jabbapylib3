@@ -1,0 +1,10 @@
+fping
+libcurl4-openssl-dev    # for pycurl
+mediainfo
+mplayer
+mpv
+tesseract
+tesseract-data-eng
+wmctrl
+xdotool
+xsel
