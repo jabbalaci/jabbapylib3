@@ -5,8 +5,8 @@ SCRIPTPATH=`dirname $SCRIPT`
 
 export PYTHONPATH=$SCRIPTPATH
 
-OPTIONS="--continue-on-collection-errors"
+# OPTIONS="--continue-on-collection-errors --doctest-modules"
 
-py.test -vs apps/tests/ $OPTIONS
-py.test -vs snippets/tests/ $OPTIONS
-py.test -vs tests/ $OPTIONS
+pytest -vs apps/tests/
+pytest -vs snippets/tests/
+pytest -vs tests/

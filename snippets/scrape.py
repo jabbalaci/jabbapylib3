@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-# encoding: utf-8
 
 """
 A skeleton file for scraping.
 """
-
 import sys
 
-from jpl2.scraper import bsoup as bs
-from jpl2.web import get_page
+if __name__ == "__main__":
+    import os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from jplib.scraper import bsoup as bs
+from jplib.web import get_page
 
 
 def process(url):

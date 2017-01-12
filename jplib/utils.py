@@ -22,10 +22,16 @@ def my_shuffle(array):
 
 
 def inc_string(text):
-    """
-    Increase a string by one.
+    """Increase a string by one.
 
-    Examples: a -> b, e -> f, z -> aa, af -> ag.
+    >>> inc_string('a')
+    'b'
+    >>> inc_string('e')
+    'f'
+    >>> inc_string('z')
+    'aa'
+    >>> inc_string('af')
+    'ag'
     """
     text = list(text[::-1])
     go_over = False
@@ -47,10 +53,10 @@ def inc_string(text):
 
 
 def pretty_num(n):
-    """
-    Converts a number to a nicely formatted string.
+    """Converts a number to a nicely formatted string.
 
-    Example: 6874 => '6,874'.
+    >>> pretty_num(6874)
+    '6,874'
     """
     return "{:,}".format(n)
 
