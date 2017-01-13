@@ -25,6 +25,13 @@ def lexicographically_next_permutation(a):
     "a" in place. Returns True if we could generate a next
     permutation. Returns False if it was the last permutation
     lexicographically.
+
+    >>> li = ['c', 'a', 'b', 'e', 'd']
+    >>> lexicographically_next_permutation(li)
+    True
+    >>> assert li == ['c', 'a', 'd', 'b', 'e']
+    >>> lexicographically_next_permutation(['e', 'd', 'c', 'b', 'a'])
+    False
     """
     i = len(a) - 2
     while not (i < 0 or a[i] < a[i+1]):

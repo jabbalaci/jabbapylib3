@@ -57,6 +57,8 @@ def pretty_num(n):
 
     >>> pretty_num(6874)
     '6,874'
+    >>> pretty_num(-6874)
+    '-6,874'
     """
     return "{:,}".format(n)
 

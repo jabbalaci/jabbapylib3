@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-# encoding: utf-8
 
 """
 Working with Gnome 2.
 """
+
+import sys
+
+if __name__ == "__main__":
+    import os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
 
 import shlex
 import sys

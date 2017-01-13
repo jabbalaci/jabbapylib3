@@ -5,6 +5,12 @@
 Working with Gnome 3.
 """
 
+import sys
+
+if __name__ == "__main__":
+    import os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
+
 import shlex
 import sys
 from subprocess import call

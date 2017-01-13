@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 algorithms that are useful for Project Euler (http://projecteuler.net)
@@ -18,6 +17,11 @@ _mrpt_num_trials = 5    # number of bases to test
 def is_prime(n):
     """
     Decide whether a number is prime or not.
+
+    >>> is_prime(2)
+    True
+    >>> is_prime(8)
+    False
     """
     if n < 2:
         return False
@@ -44,6 +48,11 @@ def is_prime_mr(n):
     True means n is very likely a prime.
 
     Source: http://rosettacode.org/wiki/Miller-Rabin_primality_test#Python
+
+    >>> is_prime_mr(2)
+    True
+    >>> is_prime_mr(8)
+    False
     """
     if n < 2:
         return False
@@ -86,7 +95,8 @@ def divisors(n):
     """
     Divisors of n.
 
-    Example: divisors of 28: 1,2,4,7,14,28.
+    >>> divisors(28)
+    [1, 2, 4, 7, 14, 28]
     """
     li = [1]
 
@@ -105,6 +115,9 @@ def divisors(n):
 def number_of_divisors(n):
     """
     Number of divisors of n.
+
+    >>> number_of_divisors(28)
+    6
     """
     cnt = 1
     if n > 1:
@@ -122,6 +135,9 @@ def prime_generator(maxi):
     Generate all the prime numbers below maxi. maxi is not included.
 
     The method uses Aristotle's sieve algorithm.
+
+    >>> prime_generator(10)
+    [2, 3, 5, 7]
     """
     li = []
     for _ in range(maxi):
@@ -175,12 +191,12 @@ def gen_primes():
 
     primes = gen_primes()
     for p in primes:
-        print p
+        print(p)
 
-    Found at http://stackoverflow.com/questions/2211990 .
+    found at http://stackoverflow.com/questions/2211990
     """
     D = {}
-    q = 2  # first integer to test for primality.
+    q = 2  # first integer to test for primality
 
     while True:
         if q not in D:
@@ -218,7 +234,10 @@ def is_palindrome(s):
     """
     Decide if a string is a palindrome or not.
 
-    Palindrome: you get the same string reading backwards.
+    >>> is_palindrome("abba")
+    True
+    >>> is_palindrome("python")
+    False
     """
     return s == s[::-1]
 
@@ -229,9 +248,12 @@ def inc_avg(li):
     Input: a list.
     Output: average of the list.
     See http://ubuntuincident.wordpress.com/2012/04/25/calculating-the-average-incrementally/ .
+
+    >>> inc_avg([2, 3, 4])
+    3.0
     """
     left = 0
-    right = len(li)-1
+    right = len(li) - 1
 
     avg = li[left]
     left += 1
@@ -269,6 +291,9 @@ def eulers_totient_phi(num):
 def gcd(a, b):
     """
     Greatest common divisor of a and b.
+
+    >>> gcd(6, 9)
+    3
     """
     return fractions.gcd(a, b)
 

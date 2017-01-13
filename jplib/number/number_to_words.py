@@ -53,6 +53,7 @@ numbers = {
 def length_1(s):
     return numbers[s]
 
+
 def length_2(s):
     if s[0] == '1' or s[1] == '0':
         return numbers[s]
@@ -80,6 +81,14 @@ def length_4(s):
 
 
 def convert(n):
+    """
+    >>> convert(1)
+    'one'
+    >>> convert(25)
+    'twenty-five'
+    >>> convert(999)
+    'nine hundred and ninety-nine'
+    """
     assert 1 <= n <= 1000
     #
     s = str(n)

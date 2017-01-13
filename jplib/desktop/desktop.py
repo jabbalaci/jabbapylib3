@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# encoding: utf-8
 
 """
 What is my current desktop environment?
@@ -8,11 +7,14 @@ from http://stackoverflow.com/questions/2035657/what-is-my-current-desktop-envir
 
 # from jplib.desktop import desktop
 """
-
 import os
+import sys
+
+if __name__ == "__main__":
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
+
 import re
 import subprocess
-import sys
 
 from jplib import process
 

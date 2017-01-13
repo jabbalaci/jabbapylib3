@@ -6,6 +6,11 @@ Working with BeautifulSoup 4.
 # from jplib.scraper import bsoup as bs
 """
 
+if __name__ == "__main__":
+    import os
+    import sys
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
+
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
