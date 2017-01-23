@@ -37,3 +37,11 @@ def test_str2num_and_num2str():
     #
     s = "hello world"
     assert jhash.num2str(jhash.str2num(s)) == s
+
+
+def test_str_to_base64_and_base64_to_str():
+    to = jhash.str_to_base64
+    back = jhash.base64_to_str
+    #
+    assert back(to("something")) == "something"
+    assert to(back("TMOhc3psw7M=")) == "TMOhc3psw7M="

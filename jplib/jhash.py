@@ -7,6 +7,7 @@ hashlib
 # from jplib.jhash import file_to_md5
 """
 
+import base64
 import hashlib
 import random
 
@@ -80,6 +81,23 @@ def num2str(n):
     else:
         return ""
 
+
+def str_to_base64(s):
+    """
+    >>> str_to_base64("László")
+    'TMOhc3psw7M='
+    """
+    data = base64.b64encode(s.encode())
+    return data.decode()
+
+
+def base64_to_str(b64):
+    """
+    >>> base64_to_str("TMOhc3psw7M=")
+    'László'
+    """
+    return base64.b64decode(b64.encode()).decode()
+
 #############################################################################
 
 if __name__ == "__main__":
@@ -95,3 +113,6 @@ if __name__ == "__main__":
     n = str2num(s)
     print(n)
     print(num2str(n))
+    print(str_to_base64("László"))
+    b64 = "TMOhc3psw7M="
+    print(base64_to_str(b64))
