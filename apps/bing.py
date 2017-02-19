@@ -20,7 +20,7 @@ import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from jplib import web
+import requests
 from jplib.dateandtime import get_date_from_year_to_day, get_unix_date
 from jplib.desktop import desktop
 from six.moves.urllib.parse import unquote, urljoin
@@ -30,7 +30,7 @@ SAVE_DIR = '/trash/bing'
 
 
 def extract(test=False):
-    text = web.get_page(URL)  #.decode("utf-8")
+    text = requests.get(URL).text
     text = text.split('g_img={url:')[1]
     text = text.split(',')[0].replace("'", "").replace('"', '').replace("\\", "")
     img_url = urljoin(URL, text).replace(" ", "")
