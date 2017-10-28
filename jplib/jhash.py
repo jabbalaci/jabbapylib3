@@ -10,6 +10,7 @@ hashlib
 import base64
 import hashlib
 import random
+import readline
 
 from six.moves import input, xrange
 
