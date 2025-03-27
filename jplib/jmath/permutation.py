@@ -11,7 +11,7 @@ Pseudo-code:
 2. Find the largest index l such that a[k] < a[l].
    Since k + 1 is such an index, l is well defined and satisfies k < l.
 3. Swap a[k] with a[l].
-4. Reverse the sequence from a[k + 1] up to and including the final element a[n].
+4. Reverse the sequence from a[k + 1] up to end including the final element a[n].
 
 # from jplib.jmath import permutation as perm
 """
